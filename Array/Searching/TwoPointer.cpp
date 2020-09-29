@@ -29,9 +29,9 @@ int main(){
             j--;
     }
         if(flag==0) 
-            cout<<"Not Found";
+            cout<<"Not Found"<<endl;
         else 
-            cout<<"Found";
+            cout<<"Found"<<endl;
 
     return 0;
 }
