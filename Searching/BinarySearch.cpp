@@ -1,4 +1,6 @@
 /*https://practice.geeksforgeeks.org/problems/who-will-win/0*/
+/*Iterative approach*/
+
 #include <iostream>
 using namespace std;
 
