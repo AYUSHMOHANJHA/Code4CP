@@ -39,26 +39,27 @@ Each node's value is either 0 or 1.
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
-class Solution {
-public:
-    int getDecimalValue(ListNode* head) {
-        
-        vector<int>v;
-        ListNode* node = head;
-        while(head->next!=NULL)
-        {
-            v.push_back(head->val);
-            head=head->next;
-        }
-        v.push_back(head->val);
 
-        int res=0,index=0;
-        for(int i=v.size()-1;i>=0;--i){
-        if(v[index]==1){
-            res=res+pow(2,i);
-        }
-            index++;
-        }
-            return res;
-    }
-};
+// class Solution {
+// public:
+//     int getDecimalValue(ListNode* head) {
+        
+//         vector<int>v;
+//         ListNode* node = head;
+//         while(head->next!=NULL)
+//         {
+//             v.push_back(head->val);
+//             head=head->next;
+//         }
+//         v.push_back(head->val);
+
+//         int res=0,index=0;
+//         for(int i=v.size()-1;i>=0;--i){
+//         if(v[index]==1){
+//             res=res+pow(2,i);
+//         }
+//             index++;
+//         }
+//             return res;
+//     }
+// };
