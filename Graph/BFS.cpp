@@ -32,7 +32,7 @@ int main(){
         graph[u].push_back(v);
         //graph[v].push_back(u);
     }
-    bfs(0,graph,visited,N);
+    bfs(2,graph,visited,N);
     cout<<endl;
-
+    return 0;
 }
