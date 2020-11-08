@@ -2,8 +2,9 @@
 
 using namespace std;
 
-bool isCycleUtil(int curr, vector<int>graph[],bool visited[])
+bool isCycleUtil(int curr, vector<int>graph[],vector<bool>visited)
 {
+    //cout<<"check:"<<visited[curr]<<endl;
     if(visited[curr]==true)
         return true;
     
@@ -17,7 +18,8 @@ bool isCycleUtil(int curr, vector<int>graph[],bool visited[])
 }
 bool isCycle(int N, vector<int>graph[])
 {
-    bool visited[N]={false};
+   // bool visited[N]={false};            //use vector here 
+    vector<bool>visited(N,false);
     for(int i=0;i<N;i++)
     {
         visited[i]=true;
