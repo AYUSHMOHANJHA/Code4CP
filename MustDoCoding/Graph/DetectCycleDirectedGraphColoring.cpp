@@ -20,19 +20,10 @@ bool isCycleUtil(int curr, vector<int>graph[],vector<bool>visited)
 bool isCycle(int N, vector<int>graph[])
 {
    // bool visited[N]={false};            //use vector here 
-    vector<bool>visited(N,false);
-    for(int i=0;i<N;i++)
-    {
-        visited[i]=true;
-        for(int j=0;j<graph[i].size();++j)
-        {
-            if(isCycleUtil(graph[i][j],graph,visited) == true)
-                return true;
-        }
-        visited[i]=false;
-    }
-    return false;
-}
+    vector<bool>visited(N,false);         
+     return isCycleUtil(graph[i][j],graph,visited);
+
+
 
 int main()
 {
