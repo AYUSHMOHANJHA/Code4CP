@@ -23,7 +23,7 @@ bool isCycle(int N, vector<int>graph[])
     vector<bool>visited(N,false);         
      return isCycleUtil(graph[i][j],graph,visited);
 
-
+}
 
 int main()
 {
