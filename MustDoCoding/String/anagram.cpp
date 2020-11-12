@@ -16,11 +16,11 @@ bool isAnagram(string c, string d){
     
     for(int i=0;i<c.size();i++)
     {
-        arr_c[((int)c[i]-97)] = 1;
+        arr_c[((int)c[i]-97)]++;
     }
     for(int i=0;i<d.size();i++)
     {
-        arr_d[((int)d[i]-97)] = 1;
+        arr_d[((int)d[i]-97)]++;
     }
     
     for(int i=0;i<26;i++)
