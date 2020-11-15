@@ -1,3 +1,12 @@
+/*
+ Complexity Analysis:
+
+    Time complexity: O(V + E), where V is the number of vertices and E is the number of edges in the graph.
+    Space Complexity: O(V). Since an extra visited array is needed of size V.
+
+
+*/
+
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -38,7 +47,7 @@ int main(){
         graph[u].push_back(v);
         //graph[v].push_back(u);
     }
-    dfs(0,graph,visited);
+    dfs(2,graph,visited);
     cout<<endl;
     return 0;
 }

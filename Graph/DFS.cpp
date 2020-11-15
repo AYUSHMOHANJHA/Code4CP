@@ -24,7 +24,7 @@ int main(){
         graph[u].push_back(v);
         graph[v].push_back(u);
     }
-    dfs(0,graph,visited);
+    dfs(2,graph,visited);
     cout<<endl;
 
 }

@@ -25,11 +25,11 @@ int main()
     for(int i=0; i<26; i++)
     {
         //cout<<"h"<<endl;
-        for(int j=0;j<count_char[i];j++){
+        for(int j=0;j<count_char[i];j++)
+        {
             //cout<<"m"<<j<<endl;
             cout<<(char)(i+'a');
         }
     }
-
     return 0;
 }
