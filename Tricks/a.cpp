@@ -15,7 +15,7 @@ int main()
         if(n>1)
         {
         while(n!=0){
-            cout<<n<<endl;
+            //cout<<n<<endl;
             if(n==1){count++;
             break;
             }
