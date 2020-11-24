@@ -16,8 +16,6 @@ int main()
     cout<<"Output of rbegin and rend: ";
     for(auto ir=g1.rbegin();ir!=g1.rend();++ir)
         cout<<*ir<<" ";
-    
 
-    
     return 0;
 }
