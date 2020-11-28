@@ -35,31 +35,31 @@ struct TrieNode *getNode(void)
 
 void insert(struct TrieNode *root, string key)
 {
-    struct TrieNode *Crawl = root;
+    struct TrieNode *newNode = root;
 
     for(int i=0; i<key.length();i++)
     {
         int index = key[i] - 'a';
-        if(!Crawl->children[index])
-            Crawl->children[index] = getNode();
+        if(!newNode->children[index])
+            newNode->children[index] = getNode();
         
-        Crawl = Crawl->children[index];
+        newNode = newNode->children[index];
     }
-    Crawl->isEndOfWord = true;
+    newNode->isEndOfWord = true;
 }
 bool search(struct TrieNode *root, string key)
 {
-    struct TrieNode *Crawl = root;
+    struct TrieNode *newNode = root;
 
     for(int i=0; i<key.length();i++)
     {
         int index = key[i] - 'a';
-        if(!Crawl->children[index])
+        if(!newNode->children[index])
             return false;
         
-        Crawl = Crawl->children[index];
+        newNode = newNode->children[index];
     }
-    return (  Crawl!= NULL && Crawl->isEndOfWord );
+    return (  newNode->isEndOfWord );
 }
 int main()
 {
@@ -76,6 +76,6 @@ int main()
 
     search(root,"jhaa") ? cout<<"yes\n":cout<<"no\n";
     search(root,"ayush") ? cout<<"yes\n":cout<<"no\n";
-
+    search(root,"jha") ? cout<<"yes\n":cout<<"no\n";
     return 0;
 }
