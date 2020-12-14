@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 int main()
 {
     int D1=0,D2=0,V1=0,V2=0;
@@ -14,7 +13,6 @@ int main()
     while(1)
     {
         if(limit>=P){break;}
-
         if(D1<D2 && day<D2)limit+=V1;
         else if(D1>D2 && day<D1)limit+=V2;
         else limit=limit+V1+V2;

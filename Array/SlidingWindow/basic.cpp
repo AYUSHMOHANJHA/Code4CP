@@ -18,6 +18,10 @@ Input  : arr[] = {2, 3}
 Output : Invalid
 There is no subarray of size 3 as size of whole
 array is 2.
+
+https://www.geeksforgeeks.org/window-sliding-technique/
+
+here we are using two for loops which can be reduced by one through one using sliding window
 */
 #include<bits/stdc++.h>
 using namespace std;
