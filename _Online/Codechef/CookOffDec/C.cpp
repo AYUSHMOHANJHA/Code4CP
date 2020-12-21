@@ -16,10 +16,8 @@ void sol(){
        }
        if(one == (len-one))cout<<0<<endl;
        else if((one==len) || one == 0)cout<<-1<<endl;
-      // else (len/2)<one ? cout<<len-one<<endl : cout<<one<<endl;
       else {
-          if((len/2)>one)cout<<(len/2)-one <<endl;
-            else cout<< (len-one)-1<<endl;
+          if((len/2)>one)cout<<abs((len/2)-one) <<endl;
       }
    }
    else cout<<-1<<endl;
