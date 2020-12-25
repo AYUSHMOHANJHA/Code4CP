@@ -12,8 +12,6 @@ cin>>s;
 for(ll i =0;i<N;i++){
     if(s[i]=='1')count++;
     }
-    //cout<<count<<endl;
-    //cout<<(100*(((120-N)+count)))/120<<endl;
     if(((100*(((120-N)+count)))/120)>=75)cout<<"YES"<<endl;
     else cout<<"NO"<<endl;
 }

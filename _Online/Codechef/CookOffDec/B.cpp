@@ -8,7 +8,7 @@ using namespace std;
 void sol(){
     ll x,y,k,N;
     cin>>x>>y>>k>>N;
-    if((abs(x-y)/k)%2==0)cout<<"Yes"<<endl;
+    if((abs(x-y)%k==0) && (abs(x-y)/k)%2==0)cout<<"Yes"<<endl;
     else cout<<"No"<<endl;
     
 }
