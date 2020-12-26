@@ -27,22 +27,19 @@ int main() {
 	}
 	return 0;
 }
-bool comparator(struct val p1,struct val p2)
+
+int maxChainLen(struct val arr[],int n)
 {
-    return (p1.second < p2.second);
-}
-int maxChainLen(struct val p[],int n)
-{
-    sort(p,p+n,comparator);
-    int count=1;
-    int s = p[0].second;
+    int lis[n]={1},a=0, c=0;
+    lis[0]=1;
     for(int i=1;i<n;i++)
     {
-        //cout<<p[i].first<<" "<<p[i].second<<endl;
-       if(s<p[i].first){count++;
-           s=p[i].second;
-       }
+        lis[i]=1;   
+        for(int j=0;j<i;j++){
+        if(arr[j].second<arr[i].first && lis[i]<lis[j]+1){
+            lis[i]=lis[j]+1;
+        }
+        }
     }
-    return count;
-
+    return (int)*max_element(lis,lis+n);
 }
