@@ -1,4 +1,4 @@
-
+//SEDARR
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -6,7 +6,14 @@ using namespace std;
 #define mod 1000000007
 
 void sol(){
-
+ll N=0,K=0,sum=0;
+cin>>N>>K;
+int val=0;
+for(ll i=0;i<N;i++){cin>>val;
+    sum+=val;
+}   
+if((sum%K)!=0){cout<<1<<endl;
+}else cout<<0<<endl;
 }
 
 int main()
