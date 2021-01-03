@@ -1,4 +1,3 @@
-
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -18,16 +17,18 @@ for(ll i=0;i<M;i++){cin>>arr2[i];
 sort(arr1,arr1+N);
 sort(arr2,arr2+M);
 ll i=0,j=M-1,count=0;
-if((sum1==sum2)|| (sum1>sum2))cout<<0<<endl;
+if((sum1>sum2))cout<<0<<endl;
 else{
-while((sum1<sum2) && (i<N ) && (j>=0)){
+while((sum1<=sum2) && (i<N ) && (j>=0) && arr1[i]!=arr2[j]){
     sum1=(sum1-arr1[i])+arr2[j];
     sum2=(sum2-arr2[j])+arr1[i];
     i++;
     j--;
     count++;
-}if(sum1>sum2)cout<<count<<endl;
- else cout<<-1<<endl;
+}
+if(sum1>sum2){cout<<count<<endl;
+}
+else cout<<-1<<endl;
 }
 }
 
