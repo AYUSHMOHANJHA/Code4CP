@@ -8,11 +8,9 @@ void printAllSubsetsRec(vector<int>&arr, int n, vector<int> v,int sum)
     if (sum==0 && flag==0) { 
         for (auto x : v) {
             s.push_back(x);
-          //  cout<<x<<" ";
             arr[(find(arr.begin(),arr.end(),x)-arr.begin())]=0;
             flag=1;
         } 
-        //cout<<endl;
         return; 
     } 
     if(n==0)return ;
