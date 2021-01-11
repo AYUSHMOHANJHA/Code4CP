@@ -25,3 +25,15 @@ int main ()
 
     return 0;
 }
+/*
+    pair<int, int>p[n];
+    for(int i=0;i<n;i++){
+        p[i].first = Weight[i];
+        p[i].second = Profit[i];
+    }
+    sort(p,p+n);
+    for(int i=0;i<n;i++){
+        Weight[i]=p[i].first ;
+        Profit[i]= p[i].second ;
+    }
+*/

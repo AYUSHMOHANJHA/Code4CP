@@ -15,7 +15,7 @@ int main()
     int n = sizeof(arr)/sizeof(arr[0]); 
     int lis[n]={1},a=0, c=0;
     lis[0]=1;
-
+    
     for(int i=1;i<n;i++)
     {
         lis[i]=1;   
@@ -25,7 +25,7 @@ int main()
         }
         }
     }
-
+    
     // for(int i=0;i<n;i++)
     // {   
     // cout<<lis[i]<<" ";
