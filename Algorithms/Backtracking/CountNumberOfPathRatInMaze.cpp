@@ -1,30 +1,30 @@
-// TC: O(2^n)
-// SC: O(n^2)
+// TC: O(R*C)
+// SC: O(R*C)
 
 #include<bits/stdc++.h>
 using namespace std;
 
-bool isSafe(int **arr, int x,int y,int n){
-    if(x<n && y<n && arr[x][y]==1)
-        return true;                    //if x & y are within matrix and arr[x][y] is 1 means path is there
-    return false;
-}
-
-bool ratinMaze(int** arr, int x, int y, int n, int **solArr){
-    if((x==(n-1)) && (y==(n-1)) && (arr[x][y]==1)){
-     solArr[x][y]==1;
-        return true;
+int CountPath(int** arr,int n){
+    int R=n,C=n;
+    if(arr[0][0]==-1)return 0;
+    //for leftmost column
+    for(int i=0;i<R;i++){
+        if(arr[i][0]==0)arr[i][0]=1;
+        else break;                 //if we encounter blocked cell
     }
-    if(isSafe(arr, x,y,n)){
-        solArr[x][y]=1;
-        if(ratinMaze(arr,x+1,y,n,solArr))
-            return true;
-        if(ratinMaze(arr,x,y+1,n,solArr))
-            return true;
-        solArr[x][y]=0;
-        return false;
+    //for rightmost column
+    for(int i=1;i<C;i++){
+        if(arr[0][i]==0)arr[0][i]=1;
+        else break;                 //if we encounter blocked cell
     }
-    return false;
+    for(int i=1;i<R;i++){
+        for(int j=1;j<C;j++){
+            if(arr[i][j]==-1)continue;
+            if(arr[i-1][j]>0)arr[i][j]=arr[i][j]+arr[i-1][j];
+            if(arr[i][j-1]>0)arr[i][j]=arr[i][j]+arr[i][j-1];
+        }
+    }
+    return (arr[R-1][C-1]>0)?arr[R-1][C-1] : 0;
 }
 
 int main(){
@@ -51,10 +51,26 @@ int main(){
             solArr[i][j]=0;
         }
     }
-    if(ratinMaze(arr,0,0,n,solArr)){
+    int res=CountPath(arr,n);
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
-                cout<<solArr[i][j]<<" ";
+                cout<<arr[i][j]<<" ";
         }cout<<endl;
-    }}
+        }
+        cout<<res<<endl;
 }
+/*
+4
+0 0 0 0
+0 -1 0 0 
+-1 0 0 0 
+0 0 0 0 
+
+1 1 1 1 
+1 -1 1 2 
+-1 0 1 3 
+0 0 1 4 
+
+4
+
+*/
