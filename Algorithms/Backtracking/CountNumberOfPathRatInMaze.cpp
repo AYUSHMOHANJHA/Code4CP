@@ -12,7 +12,7 @@ int CountPath(int** arr,int n){
         if(arr[i][0]==0)arr[i][0]=1;
         else break;                 //if we encounter blocked cell
     }
-    //for rightmost column
+    //for top most row
     for(int i=1;i<C;i++){
         if(arr[0][i]==0)arr[0][i]=1;
         else break;                 //if we encounter blocked cell
