@@ -18,7 +18,8 @@ set<pair<pair<ll ,ll >,pair<ll ,ll >>>s;
 for(ll i = 0 ;i<a;i++){
     for(ll j = 0 ;j<b;j++)
     {
-
+        if(ai[i]!=)
+        s.insert(make_pair(make_pair(ai[i],bi[i]),make_pair(ai[i],bi[i])));
     }
 }
 }
