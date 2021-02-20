@@ -32,7 +32,6 @@ int minJumps(int arr[], int n)
 	if(jumps[n-1]!=INT_MAX) return jumps[n-1];
     else return -1;
 }
-
 // Driver code
 int main()
 {
